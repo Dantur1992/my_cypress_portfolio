@@ -1,0 +1,6 @@
+export { default as loginSelectors } from "./loginPage"
+export { default as inventorySelectors } from "./inventoryPage"
+export { default as cartSelectors } from "./cartPage"
+export { default as checkOutOneSelectors } from "./checkoutOnePage"
+export { default as checkOutTwoSelectors } from "./checkoutTwoPage"
+export { default as checkOutCompleteSelectors } from "./checkoutCompletePage"
