@@ -1,10 +1,7 @@
 Feature: New test
 
-    Background: Navigate to page
-        Given The user navigate to login page
-
     Scenario Outline: Login form validation
-        And Page is open in resolution "<resolution>"
+        Given The user navigate to login page in "<resolution>"
         When The user clicks on login button
         Then The user sees message about faild login
         Examples:
@@ -14,7 +11,7 @@ Feature: New test
             | M          |
 
     Scenario Outline: Success Login
-        And Page is open in resolution "<resolution>"
+        Given The user navigate to login page in "<resolution>"
         When The user input username: "<user_name>"
         And The user input password: "<password>"
         And The user clicks on login button
@@ -30,3 +27,15 @@ Feature: New test
             | M          |  | standard_user           | secret_sauce |
             | M          |  | problem_user            | secret_sauce |
             | M          |  | performance_glitch_user | secret_sauce |
+
+    Scenario Outline: Locked user
+        Given The user navigate to login page in "<resolution>"
+        When The user input username: "locked_out_user"
+        And The user input password: "secret_sauce"
+        And The user clicks on login button
+        Then The user sees information that is blocked
+        Examples:
+            | resolution |
+            | XL         |
+            | L          |
+            | M          |

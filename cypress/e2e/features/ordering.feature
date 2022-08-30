@@ -11,6 +11,8 @@ Feature: Ordering feature
         And The user sees inventory page for "standard_user"
         Then The user add "Sauce Labs Backpack" to cart
         And The user is navigating to cart
+        And The user sees "Sauce Labs Backpack" in cart
+        And The user sees price for item to be "$29.99"
         And The user is clicks on checkout
         And The user is filling checkout form with: "<first_name>","<last_name>","<zip_code>"
         And The user click on continue button
@@ -19,5 +21,5 @@ Feature: Ordering feature
         Examples:
             | resolution | first_name | last_name | zip_code |
             | XL         | fist       | last      | 000      |
-            | L          | fist       | last      | 000      |
-            | M          | fist       | last      | 000      |
+            | L         | fist       | last      | 000      |
+            | M         | fist       | last      | 000      |

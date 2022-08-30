@@ -10,6 +10,6 @@ export const chnagePageResolution = (resolution) => {
 }
 
 export const verifyProperSessionName = (user_name) => {
-    cy.getCookie("session-username")
-        .should("have.property", "value", user_name)
+    cy.getCookie('session-username')
+        .should('have.property', 'value', user_name)
 }
