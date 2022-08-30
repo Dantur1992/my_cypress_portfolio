@@ -9,7 +9,7 @@ import {
     verifyIfOrderingFinishCorrectly
 } from "../actions/orderingActions"
 
-Then("The user add {string} to cart", (item_name: string) => {
+Then("The user add {string} to cart", (item_name) => {
     addItemToCart(item_name)
 })
 
@@ -22,7 +22,7 @@ And("The user is clicks on checkout", () => {
 })
 
 And("The user is filling checkout form with: {string},{string},{string}",
-    (first_name: string, last_name: string, zip_code: string) => {
+    (first_name, last_name, zip_code) => {
         fillCheckoutForm(first_name, last_name, zip_code)
     })
 

@@ -21,15 +21,15 @@ Then("The user sees message about faild login", () => {
     verifyIfProperMessageForUserRequierShows();
 })
 
-When("The user input username: {string}", (user_name: string) => {
+When("The user input username: {string}", (user_name) => {
     inputUsername(user_name)
 })
 
-And("The user input password: {string}", (password: string) => {
+And("The user input password: {string}", (password) => {
     inputPassword(password)
 })
 
-Then("The user sees inventory page for {string}", (user_name: string) => {
+Then("The user sees inventory page for {string}", (user_name) => {
     verifyProperUrlForInventory();
     verifyProperSessionName(user_name);
 })

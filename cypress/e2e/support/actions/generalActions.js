@@ -1,4 +1,4 @@
-export const chnagePageResolution = (resolution: string) => {
+export const chnagePageResolution = (resolution) => {
     const DEVICE_SIZE = {
         XL: [1920, 1080],
         L: [820, 1180],
@@ -9,7 +9,7 @@ export const chnagePageResolution = (resolution: string) => {
     cy.viewport(viewportWidth, viewportHeight)
 }
 
-export const verifyProperSessionName = (user_name: string) => {
+export const verifyProperSessionName = (user_name) => {
     cy.getCookie("session-username")
         .should("have.property", "value", user_name)
 }

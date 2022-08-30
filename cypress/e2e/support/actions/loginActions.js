@@ -14,10 +14,10 @@ export const verifyIfProperMessageForUserRequierShows = () => {
     cy.get(loginSelectors.labelUsernameReqiredError)
         .should("have.text", loginSelectors.userNameRequiredMessage)
 }
-export const inputUsername = (user_name: string) => {
+export const inputUsername = (user_name) => {
     cy.get(loginSelectors.inputUsername).type(user_name)
 }
-export const inputPassword = (password: string) => {
+export const inputPassword = (password) => {
     cy.get(loginSelectors.inputPassword).type(password)
 }
 export const verifyProperUrlForInventory = () => {

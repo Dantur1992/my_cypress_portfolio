@@ -6,7 +6,7 @@ import {
     checkOutCompleteSelectors
 } from '../pages'
 
-export const addItemToCart = (item_name: string) => {
+export const addItemToCart = (item_name) => {
     cy.get(inventorySelectors.classItemName)
         .contains(item_name)
         .closest(inventorySelectors.classInventoryItemDescription)
@@ -22,7 +22,7 @@ export const navigateToCheckout = () => {
     cy.get(cartSelectors.buttonNavigateToCheckout).click()
 }
 
-export const fillCheckoutForm = (first_name: string, last_name: string, zip_code: string) => {
+export const fillCheckoutForm = (first_name, last_name, zip_code) => {
     cy.get(checkOutOneSelectors.inputFirstName).type(first_name)
     cy.get(checkOutOneSelectors.inputLastName).type(last_name)
     cy.get(checkOutOneSelectors.inputZipCode).type(zip_code)
